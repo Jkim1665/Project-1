@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activity Locatator</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!--Need to add the map css-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <!--Need GoogleMaps API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQbMZwhRSBeX3-LCDgDLzHgp6UwnLXA70&libraries=places&" async
+        defer></script>
+</head>
+
+<body>
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br>
+                <br>
+                <h1 class="header center teal-text text-lighten-2">When Your Bored</h1>
+                <div class="row center">
+                    <h3 class="header col s12 light">Move</h3>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="assets/images/background1.jpg" alt="Unsplashed background img 1">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <table class="table">
+                    <h4>Community Info</h4>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Things You Like To Do</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody id="add-row">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <!--MAP API HTML-->
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 center">
+                    <h3>
+                        <i class="mdi-content-send brown-text"></i>
+                    </h3>
+                    <h4>User Info</h4>
+                    <form p class="left-align light">
+                        <div class="form-group">
+                            <label for="text">Name</label>
+                            <input type="text" class="form-control" id="user-name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Location</label>
+                            <input type="text" class="form-control" id="location">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Thing you like to do</label>
+                            <input type="text" class="form-control" id="activity">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark" id="add-user">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Weather API HTML-->
+                <div id="showWeatherForcast"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="assets/images/background3.jpg" alt="Unsplashed background img 3">
+        </div>
+    </div>
+
+    <footer class="page-footer teal">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by
+                <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jS-->
+    <script src="assets/javascript/script.js"></script>
+    <!--weather API-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="assets/javascript/materialize.min.js"></script>
+    <script src="assets/javascript/init.js"></script>
+
+</body>
+
+</html>
